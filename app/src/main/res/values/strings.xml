@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Remind Me App</string>
+    <string name="app_name">RemindMeApp-Beta</string>
+    <string name="search">Пошук</string>
 </resources>
