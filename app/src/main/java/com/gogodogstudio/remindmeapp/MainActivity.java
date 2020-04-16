@@ -1,15 +1,14 @@
 package com.gogodogstudio.remindmeapp;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
-
-import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.gogodogstudio.remindmeapp.adapter.TabAdapter;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     private void initTabLayout() {
         vP = findViewById(R.id.viewPager);
         tl = findViewById(R.id.tabLayout);
-        TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
+        TabAdapter adapter = new TabAdapter(this, getSupportFragmentManager());
         vP.setAdapter(adapter);
         tl.setupWithViewPager(vP);
 

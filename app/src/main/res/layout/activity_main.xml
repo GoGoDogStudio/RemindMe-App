@@ -22,7 +22,8 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_width="match_parent"
             android:id="@+id/toolbar"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"/>
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
@@ -32,7 +33,6 @@
                 app:tabIndicatorHeight="6dp"
                 app:tabSelectedTextColor="@android:color/white"
                 app:tabTextColor="@android:color/white"
-
                 />
 
 
@@ -46,6 +46,16 @@
         android:id="@+id/viewPager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/floatingButton"
+        app:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/plus"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
@@ -57,6 +67,8 @@
         app:menu="@menu/menu_navigation"
         app:headerLayout="@layout/navigation_header"
          />
+
+
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

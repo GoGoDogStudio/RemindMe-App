@@ -5,4 +5,11 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
+    <string name="TabHistory">Історія</string>
+    <string name="TabIdeas">Ідеї</string>
+    <string name="TabToDo">Що зробити</string>
+    <string name="Birthdays">Дні народження</string>
+
+
+
 </resources>

@@ -1,5 +1,6 @@
 package com.gogodogstudio.remindmeapp.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,19 +8,17 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import com.gogodogstudio.remindmeapp.R;
 
-public class ExampleFragment extends Fragment {
+public class IdeasFragment extends AbstractTabFragmnet {
 
-
-    private View view;
-
-    public static ExampleFragment getInstance(){
+    public static IdeasFragment getInstance(Context context){
         Bundle args = new Bundle();
-        ExampleFragment exampleFragment = new ExampleFragment();
+        IdeasFragment exampleFragment = new IdeasFragment();
         exampleFragment.setArguments(args);
+        exampleFragment.setContext(context);
+        exampleFragment.setTitle(context.getString(R.string.TabIdeas));
         return exampleFragment;
     }
 
@@ -31,4 +30,11 @@ public class ExampleFragment extends Fragment {
 
         return view;
     }
+
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+
 }
