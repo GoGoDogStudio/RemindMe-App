@@ -2,4 +2,7 @@
     <string name="app_name">RemindMeApp-Beta</string>
     <string name="search">Пошук</string>
     <string name="menu_item_notification">Нагадування</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
 </resources>
