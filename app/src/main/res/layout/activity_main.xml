@@ -8,8 +8,11 @@
     android:orientation="vertical"
     android:background="@color/mainBackground"
     android:fitsSystemWindows="true"
+    android:id="@+id/drawerLayout"
     >
-
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
@@ -23,6 +26,7 @@
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
     <com.google.android.material.navigation.NavigationView
@@ -30,6 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        app:menu="@menu/menu_navigation"
+        app:headerLayout="@layout/navigation_header"
          />
 
     </androidx.drawerlayout.widget.DrawerLayout>

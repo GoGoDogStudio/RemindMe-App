@@ -2,6 +2,7 @@ package com.gogodogstudio.remindmeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,6 +12,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 public class MainActivity extends AppCompatActivity {
 
     private MaterialToolbar toolbar;
+    private DrawerLayout dl;
 
 
 
@@ -20,15 +22,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+
         initToolBar();
+        initNavigationView();
 
 
     }
 
 
 
+
     private void initToolBar() {
-        toolbar = (MaterialToolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
@@ -38,5 +46,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         toolbar.inflateMenu(R.menu.menu);
+    }
+
+    private void initNavigationView() {
+        dl = findViewById(R.id.drawerLayout);
     }
 }
